@@ -1,0 +1,326 @@
+[
+  {
+    "id": 1,
+    "title": "Luxury Penthouse in Manhattan",
+    "description": "Stunning 3-bedroom penthouse with panoramic views of Central Park. Features high-end finishes, floor-to-ceiling windows, and a private terrace.",
+    "price": 8500,
+    "city": "New York",
+    "type": "Apartment",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 2200,
+    "rating": 4.9,
+    "reviews": 124,
+    "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    ],
+    "amenities": ["WiFi", "Parking", "Gym", "Pool", "Security", "Pet Friendly"],
+    "gps": {
+      "lat": 40.7829,
+      "lng": -73.9654,
+      "address": "Central Park West, Manhattan, NY 10024"
+    },
+    "available": true,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Modern Beach Villa in Miami",
+    "description": "Exclusive waterfront villa with direct beach access. 4 bedrooms, private pool, and contemporary design perfect for luxury living.",
+    "price": 12000,
+    "city": "Miami",
+    "type": "Villa",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": 3500,
+    "rating": 4.8,
+    "reviews": 89,
+    "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800"
+    ],
+    "amenities": ["Beach Access", "Pool", "WiFi", "Parking", "Security", "Garden"],
+    "gps": {
+      "lat": 25.7617,
+      "lng": -80.1918,
+      "address": "Ocean Drive, Miami Beach, FL 33139"
+    },
+    "available": true,
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Cozy Downtown Loft in San Francisco",
+    "description": "Charming 2-bedroom loft in the heart of downtown. Exposed brick, high ceilings, and walking distance to all major attractions.",
+    "price": 4500,
+    "city": "San Francisco",
+    "type": "Loft",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1400,
+    "rating": 4.6,
+    "reviews": 156,
+    "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800"
+    ],
+    "amenities": ["WiFi", "Parking", "Pet Friendly", "Elevator"],
+    "gps": {
+      "lat": 37.7749,
+      "lng": -122.4194,
+      "address": "Market Street, San Francisco, CA 94102"
+    },
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Elegant Estate in Beverly Hills",
+    "description": "Magnificent 6-bedroom estate with Mediterranean architecture. Features a home theater, wine cellar, and stunning city views.",
+    "price": 25000,
+    "city": "Los Angeles",
+    "type": "Villa",
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "area": 8000,
+    "rating": 5.0,
+    "reviews": 67,
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
+    ],
+    "amenities": ["Pool", "Gym", "Home Theater", "Wine Cellar", "Security", "Parking", "Garden"],
+    "gps": {
+      "lat": 34.0736,
+      "lng": -118.4004,
+      "address": "Sunset Boulevard, Beverly Hills, CA 90210"
+    },
+    "available": true,
+    "featured": true
+  },
+  {
+    "id": 5,
+    "title": "Stylish Studio in Chicago Loop",
+    "description": "Modern studio apartment with skyline views. Fully furnished with smart home features and access to building amenities.",
+    "price": 2200,
+    "city": "Chicago",
+    "type": "Apartment",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": 600,
+    "rating": 4.4,
+    "reviews": 203,
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+      "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=800"
+    ],
+    "amenities": ["WiFi", "Gym", "Parking", "Security", "Smart Home"],
+    "gps": {
+      "lat": 41.8781,
+      "lng": -87.6298,
+      "address": "Michigan Avenue, Chicago, IL 60601"
+    },
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Mountain Retreat in Aspen",
+    "description": "Luxurious 5-bedroom ski chalet with mountain views. Features a hot tub, fireplace, and direct access to ski slopes.",
+    "price": 15000,
+    "city": "Aspen",
+    "type": "House",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "area": 4500,
+    "rating": 4.9,
+    "reviews": 78,
+    "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
+    ],
+    "amenities": ["Hot Tub", "Fireplace", "WiFi", "Parking", "Ski Access", "Mountain View"],
+    "gps": {
+      "lat": 39.1911,
+      "lng": -106.8175,
+      "address": "Main Street, Aspen, CO 81611"
+    },
+    "available": true,
+    "featured": true
+  },
+  {
+    "id": 7,
+    "title": "Historic Brownstone in Boston",
+    "description": "Beautifully restored 3-bedroom brownstone with original details. Located in the charming Back Bay neighborhood.",
+    "price": 5800,
+    "city": "Boston",
+    "type": "House",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 2000,
+    "rating": 4.7,
+    "reviews": 112,
+    "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+    ],
+    "amenities": ["WiFi", "Parking", "Pet Friendly", "Garden", "Fireplace"],
+    "gps": {
+      "lat": 42.3505,
+      "lng": -71.0828,
+      "address": "Commonwealth Avenue, Boston, MA 02116"
+    },
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": 8,
+    "title": "Contemporary Condo in Seattle",
+    "description": "2-bedroom condo with Space Needle views. Modern kitchen, hardwood floors, and access to rooftop terrace.",
+    "price": 3800,
+    "city": "Seattle",
+    "type": "Apartment",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1200,
+    "rating": 4.5,
+    "reviews": 145,
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800"
+    ],
+    "amenities": ["WiFi", "Parking", "Gym", "Rooftop Access", "Pet Friendly"],
+    "gps": {
+      "lat": 47.6062,
+      "lng": -122.3321,
+      "address": "Pike Street, Seattle, WA 98101"
+    },
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": 9,
+    "title": "Tropical Paradise in Honolulu",
+    "description": "Beachfront 3-bedroom condo with ocean views. Private lanai, resort amenities, and steps from Waikiki Beach.",
+    "price": 9500,
+    "city": "Honolulu",
+    "type": "Apartment",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 1800,
+    "rating": 4.8,
+    "reviews": 167,
+    "image": "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=800",
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800"
+    ],
+    "amenities": ["Beach Access", "Pool", "WiFi", "Parking", "Security", "Ocean View"],
+    "gps": {
+      "lat": 21.2793,
+      "lng": -157.8292,
+      "address": "Kalakaua Avenue, Honolulu, HI 96815"
+    },
+    "available": true,
+    "featured": true
+  },
+  {
+    "id": 10,
+    "title": "Urban Loft in Austin",
+    "description": "Industrial-chic 2-bedroom loft in the downtown arts district. High ceilings, concrete floors, and vibrant neighborhood.",
+    "price": 3200,
+    "city": "Austin",
+    "type": "Loft",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "area": 1100,
+    "rating": 4.6,
+    "reviews": 134,
+    "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=800"
+    ],
+    "amenities": ["WiFi", "Parking", "Pet Friendly", "Rooftop Access"],
+    "gps": {
+      "lat": 30.2672,
+      "lng": -97.7431,
+      "address": "6th Street, Austin, TX 78701"
+    },
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": 11,
+    "title": "Desert Oasis in Scottsdale",
+    "description": "4-bedroom desert villa with private pool and mountain views. Modern southwest architecture and resort-style living.",
+    "price": 7500,
+    "city": "Scottsdale",
+    "type": "Villa",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": 3200,
+    "rating": 4.7,
+    "reviews": 91,
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800",
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800"
+    ],
+    "amenities": ["Pool", "WiFi", "Parking", "Garden", "Mountain View", "Fireplace"],
+    "gps": {
+      "lat": 33.4942,
+      "lng": -111.9261,
+      "address": "Scottsdale Road, Scottsdale, AZ 85251"
+    },
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": 12,
+    "title": "Waterfront Mansion in Charleston",
+    "description": "Historic 5-bedroom mansion with harbor views. Southern charm meets modern luxury with private dock and gardens.",
+    "price": 18000,
+    "city": "Charleston",
+    "type": "House",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "area": 6000,
+    "rating": 4.9,
+    "reviews": 56,
+    "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
+    ],
+    "amenities": ["Waterfront", "Garden", "WiFi", "Parking", "Security", "Dock"],
+    "gps": {
+      "lat": 32.7765,
+      "lng": -79.9311,
+      "address": "East Bay Street, Charleston, SC 29401"
+    },
+    "available": true,
+    "featured": true
+  }
+]
