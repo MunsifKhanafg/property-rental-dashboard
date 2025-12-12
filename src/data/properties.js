@@ -1,1284 +1,908 @@
 // src/data/properties.js
 
 const properties = [
-    // --- ORIGINAL PROPERTIES (Updated with location object and images array) ---
+    // --- Original 30 Properties (IDs 1 - 30) ---
+
+    // 1. Downtown Loft (New York)
     {
         id: 1,
-        title: 'Luxury Apartment in Downtown',
+        title: 'Modern Industrial Loft',
         location: { city: 'New York', state: 'NY' },
-        area: 1200,
-        beds: 2,
-        baths: 2,
-        price: 3500,
-        images: [
-            'https://images.unsplash.com/photo-1580582932707-5205da0e7b22?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7dfa2ce?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 2,
-        title: 'Spacious Family House',
-        location: { city: 'Los Angeles', state: 'CA' },
-        area: 2500,
-        beds: 4,
-        baths: 3,
-        price: 5200,
-        images: [
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 3,
-        title: 'Modern Condo with City View',
-        location: { city: 'Chicago', state: 'IL' },
-        area: 900,
-        beds: 1,
-        baths: 1,
-        price: 2800,
-        images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1600585152220-908e7455d614?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Condo'
-    },
-    {
-        id: 4,
-        title: 'Charming Townhouse',
-        location: { city: 'Miami', state: 'FL' },
-        area: 1800,
-        beds: 3,
-        baths: 2.5,
-        price: 4100,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1444723121822-d2fe904fe5f4?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Townhouse'
-    },
-    {
-        id: 5,
-        title: 'Cozy Studio Apartment',
-        location: { city: 'San Francisco', state: 'CA' },
-        area: 500,
-        beds: 1,
-        baths: 1,
-        price: 2200,
-        images: [
-            'https://images.unsplash.com/photo-1600585152220-908e7455d614?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 6,
-        title: 'Countryside Villa',
-        location: { city: 'Austin', state: 'TX' },
-        area: 3000,
-        beds: 5,
-        baths: 4,
-        price: 6500,
-        images: [
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 7,
-        title: 'Beachfront Bungalow',
-        location: { city: 'Honolulu', state: 'HI' },
-        area: 1500,
-        beds: 3,
-        baths: 2,
-        price: 7000,
-        images: [
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Bungalow'
-    },
-    {
-        id: 8,
-        title: 'Suburban Duplex',
-        location: { city: 'Denver', state: 'CO' },
-        area: 1600,
-        beds: 3,
-        baths: 2.5,
-        price: 3800,
-        images: [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185025700-f963071871a3?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Duplex'
-    },
-    
-    // --- 30 NEW PROPERTIES (IDs 9-38, Total 38 properties) ---
-    {
-        id: 9,
-        title: 'Industrial Loft with High Ceilings',
-        location: { city: 'Seattle', state: 'WA' },
         area: 1100,
         beds: 1,
         baths: 1,
-        price: 3100,
+        price: 3800,
+        rating: 4.5,
+        mainImage: 'https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         images: [
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560184897-5a0259b1d1f0?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1522071820081-009f0129c7c5?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop'
+            'https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ],
         type: 'Loft'
     },
+    // 2. Beach House (Miami)
     {
-        id: 10,
-        title: 'Modern Farmhouse on Acreage',
-        location: { city: 'Dallas', state: 'TX' },
+        id: 2,
+        title: 'Luxury Beachfront Villa',
+        location: { city: 'Miami', state: 'FL' },
         area: 4500,
         beds: 5,
         baths: 4.5,
-        price: 8500,
-        images: [
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 11,
-        title: 'Penthouse with Panoramic Views',
-        location: { city: 'San Diego', state: 'CA' },
-        area: 2200,
-        beds: 3,
-        baths: 3.5,
         price: 9500,
+        rating: 4.9,
+        mainImage: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         images: [
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185025700-f963071871a3?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Condo'
-    },
-    {
-        id: 12,
-        title: 'Historic Brownstone in Brooklyn',
-        location: { city: 'New York', state: 'NY' },
-        area: 1700,
-        beds: 3,
-        baths: 2,
-        price: 5800,
-        images: [
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1580582932707-5205da0e7b22?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7dfa2ce?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Townhouse'
-    },
-    {
-        id: 13,
-        title: 'Lakefront Cabin Retreat',
-        location: { city: 'Orlando', state: 'FL' },
-        area: 1400,
-        beds: 2,
-        baths: 1,
-        price: 3300,
-        images: [
-            'https://images.unsplash.com/photo-1444723121822-d2fe904fe5f4?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Cabin'
-    },
-    {
-        id: 14,
-        title: 'Contemporary Apartment near Tech Hub',
-        location: { city: 'Boston', state: 'MA' },
-        area: 850,
-        beds: 1,
-        baths: 1,
-        price: 2900,
-        images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 15,
-        title: 'Single-Family Home with Garden',
-        location: { city: 'Atlanta', state: 'GA' },
-        area: 2100,
-        beds: 4,
-        baths: 3,
-        price: 4500,
-        images: [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop'
+            'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1642287/pexels-photo-1642287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ],
         type: 'House'
     },
+    // 3. Suburban Home (Chicago)
     {
-        id: 16,
-        title: 'Downtown Studio with Balcony',
-        location: { city: 'Phoenix', state: 'AZ' },
-        area: 600,
-        beds: 1,
-        baths: 1,
-        price: 2100,
-        images: [
-            'https://images.unsplash.com/photo-1600585152220-908e7455d614?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 17,
-        title: 'Luxury Mansion with Pool',
-        location: { city: 'Beverly Hills', state: 'CA' },
-        area: 6000,
-        beds: 7,
-        baths: 7,
-        price: 15000,
-        images: [
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Mansion'
-    },
-    {
-        id: 18,
-        title: 'Quaint Cottage in the Hills',
-        location: { city: 'San Jose', state: 'CA' },
-        area: 1000,
-        beds: 2,
-        baths: 1,
-        price: 2600,
-        images: [
-            'https://images.unsplash.com/photo-1444723121822-d2fe904fe5f4?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Cottage'
-    },
-    {
-        id: 19,
-        title: 'New Build Townhome',
-        location: { city: 'Charlotte', state: 'NC' },
-        area: 2000,
-        beds: 3,
-        baths: 3,
-        price: 3900,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Townhouse'
-    },
-    {
-        id: 20,
-        title: 'High-Rise Apartment with Fitness Center',
-        location: { city: 'Houston', state: 'TX' },
-        area: 750,
-        beds: 1,
-        baths: 1,
-        price: 2500,
-        images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e0e?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 21,
-        title: 'Gated Community Home',
-        location: { city: 'San Antonio', state: 'TX' },
-        area: 2800,
-        beds: 4,
-        baths: 3.5,
-        price: 5000,
-        images: [
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 22,
-        title: 'Modern Duplex near Park',
-        location: { city: 'Portland', state: 'OR' },
-        area: 1500,
-        beds: 3,
-        baths: 2,
-        price: 3700,
-        images: [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Duplex'
-    },
-    {
-        id: 23,
-        title: 'Student Rental near University',
-        location: { city: 'Ann Arbor', state: 'MI' },
-        area: 1300,
-        beds: 4,
-        baths: 2,
-        price: 4800,
-        images: [
-            'https://images.unsplash.com/photo-1600585152220-908e7455d614?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 24,
-        title: 'Waterfront Estate',
-        location: { city: 'Sarasota', state: 'FL' },
-        area: 5500,
-        beds: 6,
-        baths: 5,
-        price: 12000,
-        images: [
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 25,
-        title: 'Micro-Apartment, Prime Location',
-        location: { city: 'New York', state: 'NY' },
-        area: 400,
-        beds: 0,
-        baths: 1,
-        price: 1800,
-        images: [
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Studio'
-    },
-    {
-        id: 26,
-        title: 'South Beach Condo with Ocean View',
-        location: { city: 'Miami', state: 'FL' },
-        area: 1350,
-        beds: 2,
-        baths: 2,
-        price: 5500,
-        images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Condo'
-    },
-    {
-        id: 27,
-        title: 'Modern House with Infinity Pool',
-        location: { city: 'Malibu', state: 'CA' },
-        area: 4200,
-        beds: 5,
-        baths: 5,
-        price: 14000,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 28,
-        title: 'Cozy Townhouse near Downtown',
-        location: { city: 'Nashville', state: 'TN' },
-        area: 1600,
-        beds: 3,
-        baths: 2.5,
-        price: 3200,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Townhouse'
-    },
-    {
-        id: 29,
-        title: 'Traditional Suburban Home',
-        location: { city: 'Raleigh', state: 'NC' },
-        area: 2300,
-        beds: 4,
-        baths: 3,
-        price: 4300,
-        images: [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 30,
-        title: 'Bright and Airy Condo',
-        location: { city: 'Tampa', state: 'FL' },
-        area: 1000,
-        beds: 2,
-        baths: 2,
-        price: 2700,
-        images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Condo'
-    },
-    {
-        id: 31,
-        title: 'Sleek Downtown Apartment',
-        location: { city: 'Miami', state: 'FL' },
-        area: 950,
-        beds: 1,
-        baths: 1,
-        price: 3800,
-        images: [
-            'https://images.unsplash.com/photo-1580582932707-5205da0e7b22?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7dfa2ce?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 32,
-        title: 'Large Home with Finished Basement',
-        location: { city: 'Philadelphia', state: 'PA' },
-        area: 3200,
-        beds: 5,
-        baths: 4,
-        price: 6200,
-        images: [
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 33,
-        title: 'Brand New Luxury Condo',
-        location: { city: 'San Francisco', state: 'CA' },
-        area: 1400,
-        beds: 2,
-        baths: 2,
-        price: 4800,
-        images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Condo'
-    },
-    {
-        id: 34,
-        title: 'Spacious Townhouse with Patio',
-        location: { city: 'San Diego', state: 'CA' },
-        area: 1900,
-        beds: 3,
-        baths: 2.5,
-        price: 4400,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Townhouse'
-    },
-    {
-        id: 35,
-        title: 'Budget-Friendly Studio near Metro',
-        location: { city: 'Boston', state: 'MA' },
-        area: 550,
-        beds: 0,
-        baths: 1,
-        price: 2000,
-        images: [
-            'https://images.unsplash.com/photo-1600585152220-908e7455d614?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Studio'
-    },
-    {
-        id: 36,
-        title: 'Luxury Apartment in River North',
+        id: 3,
+        title: 'Classic Suburban Family Home',
         location: { city: 'Chicago', state: 'IL' },
-        area: 1100,
-        beds: 2,
-        baths: 2,
-        price: 3600,
-        images: [
-            'https://images.unsplash.com/photo-1580582932707-5205da0e7b22?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7dfa2ce?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 37,
-        title: 'Family Home with Large Backyard',
-        location: { city: 'Denver', state: 'CO' },
-        area: 2600,
+        area: 2800,
         beds: 4,
         baths: 3,
         price: 4900,
+        rating: 4.3,
+        mainImage: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         images: [
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop'
+            'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ],
         type: 'House'
     },
+    // 4. City Condo (Los Angeles)
     {
-        id: 38,
-        title: 'Executive Condo near Waterfront',
-        location: { city: 'Seattle', state: 'WA' },
-        area: 1500,
+        id: 4,
+        title: 'High-Rise Condo with Views',
+        location: { city: 'Los Angeles', state: 'CA' },
+        area: 950,
         beds: 2,
-        baths: 2.5,
+        baths: 2,
         price: 4200,
+        rating: 4.6,
+        mainImage: 'https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop'
+            'https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/439227/pexels-photo-439227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ],
         type: 'Condo'
     },
+    // 5. Townhouse (Dallas)
     {
-        id: 39,
-        title: 'Modern Duplex in Up and Coming Area',
-        location: { city: 'Charlotte', state: 'NC' },
+        id: 5,
+        title: 'Contemporary Townhome',
+        location: { city: 'Dallas', state: 'TX' },
         area: 1750,
         beds: 3,
-        baths: 2,
-        price: 3100,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Duplex'
-    },
-    {
-        id: 40,
-        title: 'Spacious House near Golf Course',
-        location: { city: 'Phoenix', state: 'AZ' },
-        area: 3500,
-        beds: 5,
-        baths: 4,
-        price: 7500,
-        images: [
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 41,
-        title: 'One-Bedroom Apartment with Great Amenities',
-        location: { city: 'Houston', state: 'TX' },
-        area: 700,
-        beds: 1,
-        baths: 1,
-        price: 1900,
-        images: [
-            'https://images.unsplash.com/photo-1600585152220-908e7455d614?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 42,
-        title: 'Modern Condominium in Art District',
-        location: { city: 'Miami', state: 'FL' },
-        area: 1200,
-        beds: 2,
-        baths: 2,
-        price: 4500,
-        images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Condo'
-    },
-    {
-        id: 43,
-        title: 'Huge Estate on Hilltop',
-        location: { city: 'Los Angeles', state: 'CA' },
-        area: 7000,
-        beds: 8,
-        baths: 8,
-        price: 18000,
-        images: [
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Mansion'
-    },
-    {
-        id: 44,
-        title: 'Quiet Duplex near River',
-        location: { city: 'Portland', state: 'OR' },
-        area: 1650,
-        beds: 3,
-        baths: 2,
+        baths: 2.5,
         price: 3400,
+        rating: 4.2,
+        mainImage: 'https://images.pexels.com/photos/1402379/pexels-photo-1402379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         images: [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop'
+            'https://images.pexels.com/photos/1402379/pexels-photo-1402379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/259751/pexels-photo-259751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ],
-        type: 'Duplex'
+        type: 'Townhouse'
     },
+    // 6. Studio Apartment (San Francisco)
     {
-        id: 45,
-        title: 'New Loft in Arts District',
-        location: { city: 'Los Angeles', state: 'CA' },
-        area: 1300,
-        beds: 2,
-        baths: 2,
-        price: 4600,
-        images: [
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560184897-5a0259b1d1f0?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1522071820081-009f0129c7c5?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Loft'
-    },
-    {
-        id: 46,
-        title: 'Starter Home in Great Neighborhood',
-        location: { city: 'Atlanta', state: 'GA' },
-        area: 1800,
-        beds: 3,
-        baths: 2,
-        price: 3500,
-        images: [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 47,
-        title: 'Sunny Studio in Historic Building',
-        location: { city: 'New York', state: 'NY' },
-        area: 650,
+        id: 6,
+        title: 'Cozy Studio Apartment',
+        location: { city: 'San Francisco', state: 'CA' },
+        area: 550,
         beds: 0,
         baths: 1,
         price: 2400,
+        rating: 4.0,
+        mainImage: 'https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         images: [
-            'https://images.unsplash.com/photo-1600585152220-908e7455d614?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
+            'https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ],
         type: 'Studio'
     },
+    // 7. Mountain Cabin (Denver)
     {
-        id: 48,
-        title: 'Executive Townhome near Highway',
-        location: { city: 'Charlotte', state: 'NC' },
-        area: 2100,
-        beds: 4,
-        baths: 3,
-        price: 4100,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Townhouse'
-    },
-    {
-        id: 49,
-        title: 'One-of-a-Kind Architectural Home',
-        location: { city: 'San Francisco', state: 'CA' },
-        area: 3800,
-        beds: 4,
-        baths: 4.5,
-        price: 11000,
-        images: [
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 50,
-        title: 'Affordable Condo in Suburbs',
-        location: { city: 'Houston', state: 'TX' },
-        area: 800,
-        beds: 2,
-        baths: 1,
-        price: 1800,
-        images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Condo'
-    },
-    {
-        id: 51,
-        title: 'Modern Cabin with Mountain View',
+        id: 7,
+        title: 'Rustic Mountain Cabin',
         location: { city: 'Denver', state: 'CO' },
-        area: 1200,
-        beds: 2,
-        baths: 1.5,
+        area: 1600,
+        beds: 3,
+        baths: 2,
         price: 3900,
+        rating: 4.7,
+        mainImage: 'https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         images: [
-            'https://images.unsplash.com/photo-1444723121822-d2fe904fe5f4?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
+            'https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/279607/pexels-photo-279607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ],
         type: 'Cabin'
     },
+    // 8. Luxury Apartment (Boston)
     {
-        id: 52,
-        title: 'Apartment near Hospital',
+        id: 8,
+        title: 'Modern Apartment near Downtown',
         location: { city: 'Boston', state: 'MA' },
-        area: 700,
-        beds: 1,
-        baths: 1,
-        price: 2500,
-        images: [
-            'https://images.unsplash.com/photo-1580582932707-5205da0e7b22?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7dfa2ce?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 53,
-        title: 'Historic Duplex near Riverfront',
-        location: { city: 'Philadelphia', state: 'PA' },
-        area: 1450,
-        beds: 2,
-        baths: 1.5,
-        price: 2900,
-        images: [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Duplex'
-    },
-    {
-        id: 54,
-        title: 'Ocean View Bungalow',
-        location: { city: 'Honolulu', state: 'HI' },
-        area: 1600,
-        beds: 3,
-        baths: 2,
-        price: 7500,
-        images: [
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Bungalow'
-    },
-    {
-        id: 55,
-        title: 'Modern Downtown Loft',
-        location: { city: 'San Antonio', state: 'TX' },
-        area: 1050,
-        beds: 1,
-        baths: 1,
-        price: 2800,
-        images: [
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560184897-5a0259b1d1f0?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1522071820081-009f0129c7c5?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Loft'
-    },
-    {
-        id: 56,
-        title: 'New Family Home in Quiet Suburb',
-        location: { city: 'Atlanta', state: 'GA' },
-        area: 2400,
-        beds: 4,
-        baths: 3.5,
-        price: 4800,
-        images: [
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 57,
-        title: 'Studio with Rooftop Access',
-        location: { city: 'Chicago', state: 'IL' },
-        area: 450,
-        beds: 0,
-        baths: 1,
-        price: 1900,
-        images: [
-            'https://images.unsplash.com/photo-1600585152220-908e7455d614?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Studio'
-    },
-    {
-        id: 58,
-        title: 'Charming Townhome with Community Pool',
-        location: { city: 'Tampa', state: 'FL' },
-        area: 1700,
-        beds: 3,
-        baths: 2,
-        price: 3100,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Townhouse'
-    },
-    {
-        id: 59,
-        title: 'Bungalow in Trendy Neighborhood',
-        location: { city: 'Portland', state: 'OR' },
-        area: 1100,
-        beds: 2,
-        baths: 1,
-        price: 2800,
-        images: [
-            'https://images.unsplash.com/photo-1444723121822-d2fe904fe5f4?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Bungalow'
-    },
-    {
-        id: 60,
-        title: 'Executive Apartment in New Tower',
-        location: { city: 'New York', state: 'NY' },
-        area: 1600,
-        beds: 3,
-        baths: 2.5,
-        price: 6000,
-        images: [
-            'https://images.unsplash.com/photo-1580582932707-5205da0e7b22?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7dfa2ce?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 61,
-        title: 'Large Duplex near Shopping Center',
-        location: { city: 'Raleigh', state: 'NC' },
-        area: 1800,
-        beds: 3,
-        baths: 2,
-        price: 3400,
-        images: [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Duplex'
-    },
-    {
-        id: 62,
-        title: 'Luxury Estate with Guest House',
-        location: { city: 'Dallas', state: 'TX' },
-        area: 5000,
-        beds: 6,
-        baths: 5.5,
-        price: 13000,
-        images: [
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Mansion'
-    },
-    {
-        id: 63,
-        title: 'Sunny Condo near Beach',
-        location: { city: 'San Diego', state: 'CA' },
-        area: 980,
-        beds: 2,
-        baths: 1,
-        price: 3300,
-        images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Condo'
-    },
-    {
-        id: 64,
-        title: 'Small Cottage in Wooded Area',
-        location: { city: 'Orlando', state: 'FL' },
-        area: 950,
-        beds: 2,
-        baths: 1,
-        price: 2300,
-        images: [
-            'https://images.unsplash.com/photo-1444723121822-d2fe904fe5f4?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Cottage'
-    },
-    {
-        id: 65,
-        title: 'Three-Bedroom Townhome',
-        location: { city: 'Nashville', state: 'TN' },
-        area: 1750,
-        beds: 3,
-        baths: 2.5,
-        price: 3500,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Townhouse'
-    },
-    {
-        id: 66,
-        title: 'Modern Apartment with Pool Access',
-        location: { city: 'Phoenix', state: 'AZ' },
-        area: 850,
-        beds: 1,
-        baths: 1,
-        price: 2300,
-        images: [
-            'https://images.unsplash.com/photo-1580582932707-5205da0e7b22?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7dfa2ce?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Apartment'
-    },
-    {
-        id: 67,
-        title: 'House in Historic District',
-        location: { city: 'Philadelphia', state: 'PA' },
-        area: 2700,
-        beds: 4,
-        baths: 3,
-        price: 5400,
-        images: [
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 68,
-        title: 'Bungalow with Large Porch',
-        location: { city: 'Portland', state: 'OR' },
         area: 1300,
-        beds: 2,
-        baths: 1,
-        price: 3100,
-        images: [
-            'https://images.unsplash.com/photo-1444723121822-d2fe904fe5f4?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1615873968403-bb90a36b567d?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Bungalow'
-    },
-    {
-        id: 69,
-        title: 'Loft with Rooftop Patio',
-        location: { city: 'Seattle', state: 'WA' },
-        area: 1400,
         beds: 2,
         baths: 2,
         price: 4500,
+        rating: 4.4,
+        mainImage: 'https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         images: [
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560184897-5a0259b1d1f0?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1522071820081-009f0129c7c5?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Loft'
-    },
-    {
-        id: 70,
-        title: 'Luxury Townhouse with Garage',
-        location: { city: 'Dallas', state: 'TX' },
-        area: 2500,
-        beds: 4,
-        baths: 3.5,
-        price: 5200,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'Townhouse'
-    },
-    {
-        id: 71,
-        title: 'Spacious Duplex near Beach',
-        location: { city: 'Tampa', state: 'FL' },
-        area: 1800,
-        beds: 3,
-        baths: 2,
-        price: 3600,
-        images: [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Duplex'
-    },
-    {
-        id: 72,
-        title: 'New Luxury Condo with Balcony',
-        location: { city: 'Boston', state: 'MA' },
-        area: 1100,
-        beds: 2,
-        baths: 2,
-        price: 3900,
-        images: [
-            'https://images.unsplash.com/photo-1549517045-bc93de075e6b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1580582932707-5205da0e7b22?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7dfa2ce?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Condo'
-    },
-    {
-        id: 73,
-        title: 'Modern House with Large Windows',
-        location: { city: 'Atlanta', state: 'GA' },
-        area: 2900,
-        beds: 5,
-        baths: 4,
-        price: 5500,
-        images: [
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop'
-        ],
-        type: 'House'
-    },
-    {
-        id: 74,
-        title: 'Spacious Studio Apartment',
-        location: { city: 'Phoenix', state: 'AZ' },
-        area: 600,
-        beds: 0,
-        baths: 1,
-        price: 1800,
-        images: [
-            'https://images.unsplash.com/photo-1600585152220-908e7455d614?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595521715690-3367f0f63e00?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1506441094898-d872b7a90f11?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Studio'
-    },
-    {
-        id: 75,
-        title: 'Luxury Townhouse in Quiet Corner',
-        location: { city: 'San Jose', state: 'CA' },
-        area: 2300,
-        beds: 4,
-        baths: 3.5,
-        price: 5300,
-        images: [
-            'https://images.unsplash.com/photo-1554995207-c18c696e2e2a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1592595896615-c26685f93973?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Townhouse'
-    },
-    {
-        id: 76,
-        title: 'Waterfront Duplex',
-        location: { city: 'Honolulu', state: 'HI' },
-        area: 2000,
-        beds: 4,
-        baths: 3,
-        price: 8000,
-        images: [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1574635645601-e23a6509177a?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505881403212-70b5550a1e0b?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1568605114216-ef2540b61be4?q=80&w=2940&auto=format&fit=crop'
-        ],
-        type: 'Duplex'
-    },
-    {
-        id: 77,
-        title: 'Modern Apartment near Stadium',
-        location: { city: 'Houston', state: 'TX' },
-        area: 900,
-        beds: 1,
-        baths: 1,
-        price: 2600,
-        images: [
-            'https://images.unsplash.com/photo-1580582932707-5205da0e7b22?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185121-65b1285038c1?q=80&w=2940&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618220048043-349f87c4f48b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1505691938895-1758d7dfa2ce?q=80&w=2940&auto=format&fit=crop'
+            'https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ],
         type: 'Apartment'
     },
+    // 9. Mediterranean Mansion (Beverly Hills)
     {
-        id: 78,
-        title: 'Huge House in Prime Location',
-        location: { city: 'Malibu', state: 'CA' },
-        area: 4800,
-        beds: 6,
-        baths: 5,
-        price: 16000,
+        id: 9,
+        title: 'Stunning Mediterranean Mansion',
+        location: { city: 'Beverly Hills', state: 'CA' },
+        area: 7500,
+        beds: 8,
+        baths: 9,
+        price: 18000,
+        rating: 5.0,
+        mainImage: 'https://images.pexels.com/photos/6032276/pexels-photo-6032276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         images: [
-            'https://images.unsplash.com/photo-1570129477041-ad6e03c15d7f?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1583608225576-2e8812c7553b?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1502672260266-cedfb1bbd9e1?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1556912173-3bb406fa70db?q=80&w=2800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop'
+            
+            'https://images.pexels.com/photos/1029285/pexels-photo-1029285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Mansion'
+    },
+    // 10. Historic Townhouse (Philadelphia)
+    {
+        id: 10,
+        title: 'Charming Historic Townhouse',
+        location: { city: 'Philadelphia', state: 'PA' },
+        area: 1900,
+        beds: 3,
+        baths: 2.5,
+        price: 3500,
+        rating: 4.1,
+        mainImage: 'https://images.pexels.com/photos/221540/pexels-photo-221540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/221540/pexels-photo-221540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/3771804/pexels-photo-3771804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Townhouse'
+    },
+    // 11. New Home (Seattle)
+    {
+        id: 11,
+        title: 'Newly Built Family Home',
+        location: { city: 'Seattle', state: 'WA' },
+        area: 2400,
+        beds: 4,
+        baths: 3,
+        price: 5800,
+        rating: 4.5,
+        mainImage: 'https://images.pexels.com/photos/2079032/pexels-photo-2079032.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            
+            'https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/4033285/pexels-photo-4033285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'House'
+    },
+    // 12. Small Apartment (Atlanta)
+    {
+        id: 12,
+        title: 'Efficiency Apartment',
+        location: { city: 'Atlanta', state: 'GA' },
+        area: 600,
+        beds: 1,
+        baths: 1,
+        price: 1900,
+        rating: 3.8,
+        mainImage:  'https://images.pexels.com/photos/2440473/pexels-photo-2440473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+           
+            'https://images.pexels.com/photos/271775/pexels-photo-271775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Apartment'
+    },
+    // 13. Duplex (Charlotte)
+    {
+        id: 13,
+        title: 'Split-Level Duplex',
+        location: { city: 'Charlotte', state: 'NC' },
+        area: 1800,
+        beds: 3,
+        baths: 2,
+        price: 3200,
+        rating: 4.0,
+        mainImage: 'https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/463996/pexels-photo-463996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Duplex'
+    },
+    // 14. Condo (San Diego)
+    {
+        id: 14,
+        title: 'Waterfront Condo',
+        location: { city: 'San Diego', state: 'CA' },
+        area: 1400,
+        beds: 2,
+        baths: 2,
+        price: 4900,
+        rating: 4.7,
+        mainImage: 'https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/3935332/pexels-photo-3935332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/279745/pexels-photo-279745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Condo'
+    },
+    // 15. Single Family Home (Houston)
+    {
+        id: 15,
+        title: 'Spacious Single-Family Residence',
+        location: { city: 'Houston', state: 'TX' },
+        area: 3000,
+        beds: 4,
+        baths: 3.5,
+        price: 5500,
+        rating: 4.4,
+        mainImage: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1668860/pexels-photo-1668860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1475938/pexels-photo-1475938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'House'
+    },
+    // 16. Studio (Portland)
+    {
+        id: 16,
+        title: 'Compact Studio Loft',
+        location: { city: 'Portland', state: 'OR' },
+        area: 450,
+        beds: 0,
+        baths: 1,
+        price: 2000,
+        rating: 3.9,
+        mainImage: 'https://images.pexels.com/photos/276725/pexels-photo-276725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/276725/pexels-photo-276725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1648768/pexels-photo-1648768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Studio'
+    },
+    // 17. Townhouse (San Jose)
+    {
+        id: 17,
+        title: 'Green Belt Townhouse',
+        location: { city: 'San Jose', state: 'CA' },
+        area: 1650,
+        beds: 3,
+        baths: 2.5,
+        price: 3950,
+        rating: 4.2,
+        mainImage: 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/279752/pexels-photo-279752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Townhouse'
+    },
+    // 18. Luxury Apartment (Phoenix)
+    {
+        id: 18,
+        title: 'Premium Apartment Complex',
+        location: { city: 'Phoenix', state: 'AZ' },
+        area: 1250,
+        beds: 2,
+        baths: 2,
+        price: 2800,
+        rating: 4.6,
+        mainImage: 'https://images.pexels.com/photos/275484/pexels-photo-275484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/275484/pexels-photo-275484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1080709/pexels-photo-1080709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Apartment'
+    },
+    // 19. Cottage (Orlando)
+    {
+        id: 19,
+        title: 'Charming Lakeside Cottage',
+        location: { city: 'Orlando', state: 'FL' },
+        area: 1400,
+        beds: 3,
+        baths: 2,
+        price: 3100,
+        rating: 4.3,
+        mainImage: 'https://images.pexels.com/photos/4006190/pexels-photo-4006190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/4006190/pexels-photo-4006190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1488326/pexels-photo-1488326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2775681/pexels-photo-2775681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Cottage'
+    },
+    // 20. Townhouse (Nashville)
+    {
+        id: 20,
+        title: 'Modern Townhouse near City Center',
+        location: { city: 'Nashville', state: 'TN' },
+        area: 1850,
+        beds: 3,
+        baths: 2.5,
+        price: 3600,
+        rating: 4.1,
+        mainImage:  'https://images.pexels.com/photos/1475935/pexels-photo-1475935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+           
+            'https://images.pexels.com/photos/1643196/pexels-photo-1643196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Townhouse'
+    },
+    // 21. Ranch Home (Austin)
+    {
+        id: 21,
+        title: 'Mid-Century Ranch Home',
+        location: { city: 'Austin', state: 'TX' },
+        area: 2100,
+        beds: 3,
+        baths: 2,
+        price: 4800,
+        rating: 4.3,
+        mainImage: 'https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2756813/pexels-photo-2756813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/209265/pexels-photo-209265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'House'
+    },
+    // 22. Condominium (Chicago)
+    {
+        id: 22,
+        title: 'Modern Condominium in West Loop',
+        location: { city: 'Chicago', state: 'IL' },
+        area: 1400,
+        beds: 2,
+        baths: 2,
+        price: 3600,
+        rating: 4.5,
+        mainImage: 'https://images.pexels.com/photos/279745/pexels-photo-279745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/279745/pexels-photo-279745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/271649/pexels-photo-271649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/439227/pexels-photo-439227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Condo'
+    },
+    // 23. Studio Apartment (Washington D.C.)
+    {
+        id: 23,
+        title: 'Furnished Studio near Capitol',
+        location: { city: 'Washington', state: 'DC' },
+        area: 500,
+        beds: 0,
+        baths: 1,
+        price: 2600,
+        rating: 3.7,
+        mainImage: 'https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Studio'
+    },
+    // 24. Lake House (Minnetonka)
+    {
+        id: 24,
+        title: 'Sprawling Lakefront Home',
+        location: { city: 'Minnetonka', state: 'MN' },
+        area: 3200,
+        beds: 4,
+        baths: 3.5,
+        price: 6500,
+        rating: 4.8,
+        mainImage: 'https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2082092/pexels-photo-2082092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/209315/pexels-photo-209315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'House'
+    },
+    // 25. Duplex (Detroit)
+    {
+        id: 25,
+        title: 'Renovated Duplex Unit',
+        location: { city: 'Detroit', state: 'MI' },
+        area: 1500,
+        beds: 3,
+        baths: 1.5,
+        price: 1800,
+        rating: 3.6,
+        mainImage: 'https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Duplex'
+    },
+    // 26. Luxury Apartment (San Antonio)
+    {
+        id: 26,
+        title: 'Luxury Apartment with Pool Access',
+        location: { city: 'San Antonio', state: 'TX' },
+        area: 1150,
+        beds: 2,
+        baths: 2,
+        price: 2500,
+        rating: 4.5,
+        mainImage: 'https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/275484/pexels-photo-275484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Apartment'
+    },
+    // 27. Modern Townhouse (Salt Lake City)
+    {
+        id: 27,
+        title: 'Modern Townhouse near Mountains',
+        location: { city: 'Salt Lake City', state: 'UT' },
+        area: 1700,
+        beds: 3,
+        baths: 3,
+        price: 3800,
+        rating: 4.6,
+        mainImage: 'https://images.pexels.com/photos/279752/pexels-photo-279752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/279752/pexels-photo-279752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/259751/pexels-photo-259751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Townhouse'
+    },
+    // 28. House (Milwaukee)
+    {
+        id: 28,
+        title: 'Traditional Single-Family Home',
+        location: { city: 'Milwaukee', state: 'WI' },
+        area: 2500,
+        beds: 4,
+        baths: 2.5,
+        price: 2900,
+        rating: 4.0,
+        mainImage:'https://images.pexels.com/photos/1080709/pexels-photo-1080709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            
+            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1668860/pexels-photo-1668860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'House'
+    },
+    // 29. Cottage (Raleigh)
+    {
+        id: 29,
+        title: 'Quaint Cottage with Garden',
+        location: { city: 'Raleigh', state: 'NC' },
+        area: 1200,
+        beds: 2,
+        baths: 1,
+        price: 2300,
+        rating: 3.9,
+        mainImage: 'https://images.pexels.com/photos/2775681/pexels-photo-2775681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/2775681/pexels-photo-2775681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/4006190/pexels-photo-4006190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1488326/pexels-photo-1488326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Cottage'
+    },
+    // 30. Condo (Philadelphia)
+    {
+        id: 30,
+        title: 'Gated Community Condo',
+        location: { city: 'Philadelphia', state: 'PA' },
+        area: 1050,
+        beds: 2,
+        baths: 1,
+        price: 2900,
+        rating: 4.1,
+        mainImage: 'https://images.pexels.com/photos/3935332/pexels-photo-3935332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/3935332/pexels-photo-3935332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Condo'
+    },
+
+    // --- NEW 20 Properties (IDs 31 - 50) ---
+
+    // 31. Luxury Penthouse (Chicago)
+    {
+        id: 31,
+        title: 'Skyline View Penthouse',
+        location: { city: 'Chicago', state: 'IL' },
+        area: 2500,
+        beds: 3,
+        baths: 3,
+        price: 12000,
+        rating: 4.9,
+        mainImage: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/3771804/pexels-photo-3771804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Condo'
+    },
+    // 32. Farmhouse (Upstate NY)
+    {
+        id: 32,
+        title: 'Rustic Farmhouse Retreat',
+        location: { city: 'Ithaca', state: 'NY' },
+        area: 3500,
+        beds: 5,
+        baths: 3,
+        price: 4100,
+        rating: 4.7,
+        mainImage: 'https://images.pexels.com/photos/2082092/pexels-photo-2082092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/2082092/pexels-photo-2082092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/209315/pexels-photo-209315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'House'
+    },
+    // 33. Duplex (St. Louis)
+    {
+        id: 33,
+        title: 'Historic Duplex near Park',
+        location: { city: 'St. Louis', state: 'MO' },
+        area: 1700,
+        beds: 2,
+        baths: 1.5,
+        price: 2100,
+        rating: 3.8,
+        mainImage: 'https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/463996/pexels-photo-463996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Duplex'
+    },
+    // 34. Cottage (Savannah)
+    {
+        id: 34,
+        title: 'Southern Charm Cottage',
+        location: { city: 'Savannah', state: 'GA' },
+        area: 1300,
+        beds: 2,
+        baths: 2,
+        price: 2700,
+        rating: 4.4,
+        mainImage: 'https://images.pexels.com/photos/1488326/pexels-photo-1488326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            
+            'https://images.pexels.com/photos/2775681/pexels-photo-2775681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/4006190/pexels-photo-4006190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Cottage'
+    },
+    // 35. Townhouse (San Francisco)
+    {
+        id: 35,
+        title: 'Modern Townhouse with Garage',
+        location: { city: 'San Francisco', state: 'CA' },
+        area: 1800,
+        beds: 3,
+        baths: 3.5,
+        price: 6200,
+        rating: 4.6,
+        mainImage: 'https://images.pexels.com/photos/259751/pexels-photo-259751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/259751/pexels-photo-259751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/279752/pexels-photo-279752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Townhouse'
+    },
+    // 36. Apartment (Denver)
+    {
+        id: 36,
+        title: 'Spacious Apartment with Balcony',
+        location: { city: 'Denver', state: 'CO' },
+        area: 1000,
+        beds: 2,
+        baths: 1,
+        price: 3300,
+        rating: 4.2,
+        mainImage: 'https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Apartment'
+    },
+    // 37. Condo (Tampa)
+    {
+        id: 37,
+        title: 'Gated Condo near Coast',
+        location: { city: 'Tampa', state: 'FL' },
+        area: 1250,
+        beds: 2,
+        baths: 2,
+        price: 3100,
+        rating: 4.0,
+        mainImage: 'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/3935332/pexels-photo-3935332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Condo'
+    },
+    // 38. House (San Antonio)
+    {
+        id: 38,
+        title: 'Modern Family Home',
+        location: { city: 'San Antonio', state: 'TX' },
+        area: 2700,
+        beds: 4,
+        baths: 3,
+        price: 4500,
+        rating: 4.3,
+        mainImage: 'https://images.pexels.com/photos/1668860/pexels-photo-1668860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/1668860/pexels-photo-1668860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'House'
+    },
+    // 39. Studio (Las Vegas)
+    {
+        id: 39,
+        title: 'Strip View Studio',
+        location: { city: 'Las Vegas', state: 'NV' },
+        area: 550,
+        beds: 0,
+        baths: 1,
+        price: 2900,
+        rating: 4.1,
+        mainImage: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Studio'
+    },
+    // 40. Townhouse (Baltimore)
+    {
+        id: 40,
+        title: 'Inner Harbor Townhouse',
+        location: { city: 'Baltimore', state: 'MD' },
+        area: 1950,
+        beds: 3,
+        baths: 2.5,
+        price: 3300,
+        rating: 3.9,
+        mainImage: 'https://images.pexels.com/photos/1643196/pexels-photo-1643196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/1643196/pexels-photo-1643196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1475935/pexels-photo-1475935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Townhouse'
+    },
+    // 41. House (Richmond)
+    {
+        id: 41,
+        title: 'Classic Brick Home',
+        location: { city: 'Richmond', state: 'VA' },
+        area: 2600,
+        beds: 4,
+        baths: 2,
+        price: 3500,
+        rating: 4.2,
+        mainImage: 'https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2079032/pexels-photo-2079032.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/4033285/pexels-photo-4033285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'House'
+    },
+    // 42. Apartment (Cincinnati)
+    {
+        id: 42,
+        title: 'Downtown High-End Apartment',
+        location: { city: 'Cincinnati', state: 'OH' },
+        area: 900,
+        beds: 1,
+        baths: 1,
+        price: 2200,
+        rating: 4.0,
+        mainImage: 'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2440473/pexels-photo-2440473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/271775/pexels-photo-271775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Apartment'
+    },
+    // 43. Cottage (Asheville)
+    {
+        id: 43,
+        title: 'Cozy Arts & Crafts Cottage',
+        location: { city: 'Asheville', state: 'NC' },
+        area: 1100,
+        beds: 2,
+        baths: 1,
+        price: 2600,
+        rating: 4.5,
+        mainImage: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1488326/pexels-photo-1488326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2775681/pexels-photo-2775681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Cottage'
+    },
+    // 44. Condo (Honolulu)
+    {
+        id: 44,
+        title: 'Ocean View Condo',
+        location: { city: 'Honolulu', state: 'HI' },
+        area: 1050,
+        beds: 2,
+        baths: 2,
+        price: 5500,
+        rating: 4.8,
+        mainImage: 'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/439227/pexels-photo-439227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Condo'
+    },
+    // 45. Townhouse (Omaha)
+    {
+        id: 45,
+        title: 'New Construction Townhouse',
+        location: { city: 'Omaha', state: 'NE' },
+        area: 1600,
+        beds: 3,
+        baths: 2.5,
+        price: 2500,
+        rating: 4.1,
+        mainImage: 'https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/279752/pexels-photo-279752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/259751/pexels-photo-259751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Townhouse'
+    },
+    // 46. House (Kansas City)
+    {
+        id: 46,
+        title: 'Large Family House with Yard',
+        location: { city: 'Kansas City', state: 'MO' },
+        area: 3100,
+        beds: 5,
+        baths: 4,
+        price: 4300,
+        rating: 4.4,
+        mainImage: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'House'
+    },
+    // 47. Duplex (Miami)
+    {
+        id: 47,
+        title: 'Modern Duplex Unit in Little Havana',
+        location: { city: 'Miami', state: 'FL' },
+        area: 1300,
+        beds: 2,
+        baths: 2,
+        price: 3600,
+        rating: 4.0,
+        mainImage: 'https://images.pexels.com/photos/463996/pexels-photo-463996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/463996/pexels-photo-463996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Duplex'
+    },
+    // 48. Apartment (San Diego)
+    {
+        id: 48,
+        title: 'Stylish Apartment near Downtown',
+        location: { city: 'San Diego', state: 'CA' },
+        area: 850,
+        beds: 1,
+        baths: 1,
+        price: 3400,
+        rating: 4.5,
+        mainImage: 'https://images.pexels.com/photos/271775/pexels-photo-271775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/271775/pexels-photo-271775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2440473/pexels-photo-2440473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Apartment'
+    },
+    // 49. Cabin (Jackson Hole)
+    {
+        id: 49,
+        title: 'Ski-in/Ski-out Cabin',
+        location: { city: 'Jackson Hole', state: 'WY' },
+        area: 2100,
+        beds: 4,
+        baths: 3,
+        price: 7800,
+        rating: 4.9,
+        mainImage: 'https://images.pexels.com/photos/279607/pexels-photo-279607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/279607/pexels-photo-279607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ],
+        type: 'Cabin'
+    },
+    // 50. Mansion (Newport)
+    {
+        id: 50,
+        title: 'Historic Coastal Mansion',
+        location: { city: 'Newport', state: 'RI' },
+        area: 9000,
+        beds: 10,
+        baths: 11,
+        price: 22000,
+        rating: 5.0,
+        mainImage: 'https://images.pexels.com/photos/1029285/pexels-photo-1029285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        images: [
+            'https://images.pexels.com/photos/1029285/pexels-photo-1029285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/6032276/pexels-photo-6032276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ],
         type: 'Mansion'
     }

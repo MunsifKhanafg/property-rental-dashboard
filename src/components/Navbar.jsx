@@ -1,5 +1,7 @@
+// src/components/Navbar.jsx
+
 import React, { useState, useEffect } from 'react';
-import { FiSun, FiMoon, FiHeart, FiGrid, FiList, FiMenu, FiX } from 'react-icons/fi';
+import { FiSun, FiMoon, FiHeart, FiMenu, FiX } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
 import { getTheme, setTheme, getFavorites } from '../utils/helpers';
 
@@ -19,12 +21,12 @@ const Navbar = () => {
     };
     
     updateFavoritesCount();
-    window.addEventListener('favoritesUpdated', updateFavoritesCount);
+    window.addEventListener('favoritesUpdated', updateFavoritesCount); 
     
     return () => {
       window.removeEventListener('favoritesUpdated', updateFavoritesCount);
     };
-  }, [location]);
+  }, []);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -37,117 +39,105 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-xl">PR</span>
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
-              PropertyRental
-            </span>
+          <Link to="/" className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+            PropertyHub
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center space-x-6">
             <Link
               to="/"
-              className={`font-medium transition-colors duration-300 ${
+              className={`font-medium transition-colors duration-200 ${
                 isActive('/') 
-                  ? 'text-primary-600 dark:text-primary-400' 
-                  : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+                  ? 'text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400 pb-1' 
+                  : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400'
               }`}
             >
               Home
             </Link>
             <Link
               to="/favorites"
-              className={`font-medium transition-colors duration-300 flex items-center space-x-2 ${
+              className={`font-medium transition-colors duration-200 flex items-center space-x-1 ${
                 isActive('/favorites') 
-                  ? 'text-primary-600 dark:text-primary-400' 
-                  : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+                  ? 'text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400 pb-1' 
+                  : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400'
               }`}
             >
-              <FiHeart className={favoritesCount > 0 ? 'fill-current' : ''} />
+              <FiHeart className={`w-5 h-5 ${favoritesCount > 0 ? 'fill-current' : ''}`} />
               <span>Favorites</span>
               {favoritesCount > 0 && (
-                <span className="bg-primary-600 text-white text-xs rounded-full px-2 py-0.5 animate-scale-in">
+                <span className="bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
                   {favoritesCount}
                 </span>
               )}
             </Link>
-
-            {/* Theme Toggle */}
+            {/* Dark Mode Toggle - Desktop */}
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
-              aria-label="Toggle theme"
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 text-gray-700 dark:text-gray-300"
             >
-              {darkMode ? (
-                <FiSun className="w-5 h-5 text-yellow-500" />
-              ) : (
-                <FiMoon className="w-5 h-5 text-gray-700" />
-              )}
+              {darkMode ? <FiSun className="w-6 h-6 text-yellow-500" /> : <FiMoon className="w-6 h-6" />}
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Menu Button & Toggle (Combined) */}
+          <div className="flex items-center lg:hidden">
+            {/* Mobile Dark Mode Toggle (inline with menu button) */}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 text-gray-700 dark:text-gray-300 mr-2"
+            >
+              {darkMode ? <FiSun className="w-6 h-6 text-yellow-500" /> : <FiMoon className="w-6 h-6" />}
+            </button>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"
+            >
+              {mobileMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Panel */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-gray-200 dark:border-gray-700 animate-slide-up">
-          <div className="px-4 py-4 space-y-3">
+        <div className="lg:hidden absolute top-16 inset-x-0 glass-effect border-b border-gray-200 dark:border-gray-700 shadow-xl py-4 animate-fade-in">
+          <div className="px-4 sm:px-6 space-y-2 pb-2">
+            
+            {/* Home Link */}
             <Link
               to="/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`block font-medium py-2 ${
+              className={`block font-semibold py-3 px-4 rounded-lg transition-colors duration-200 ${// 💡 Increased padding for better tap target
                 isActive('/') 
-                  ? 'text-primary-600 dark:text-primary-400' 
-                  : 'text-gray-700 dark:text-gray-300'
+                  ? 'bg-indigo-100 text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-400' 
+                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
               }`}
             >
               Home
             </Link>
+
+            {/* Favorites Link */}
             <Link
               to="/favorites"
               onClick={() => setMobileMenuOpen(false)}
-              className={`block font-medium py-2 flex items-center space-x-2 ${
+              className={`block font-semibold py-3 px-4 rounded-lg flex items-center justify-between transition-colors duration-200 ${ // 💡 Increased padding for better tap target
                 isActive('/favorites') 
-                  ? 'text-primary-600 dark:text-primary-400' 
-                  : 'text-gray-700 dark:text-gray-300'
+                  ? 'bg-indigo-100 text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-400' 
+                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
               }`}
             >
-              <FiHeart className={favoritesCount > 0 ? 'fill-current' : ''} />
-              <span>Favorites</span>
+              <span className="flex items-center space-x-2">
+                <FiHeart className={`w-5 h-5 ${favoritesCount > 0 ? 'fill-current text-red-500' : ''}`} />
+                <span>Favorites</span>
+              </span>
               {favoritesCount > 0 && (
-                <span className="bg-primary-600 text-white text-xs rounded-full px-2 py-0.5">
+                <span className="bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
                   {favoritesCount}
                 </span>
               )}
             </Link>
-            <button
-              onClick={toggleDarkMode}
-              className="flex items-center space-x-2 font-medium py-2 text-gray-700 dark:text-gray-300"
-            >
-              {darkMode ? (
-                <>
-                  <FiSun className="w-5 h-5 text-yellow-500" />
-                  <span>Light Mode</span>
-                </>
-              ) : (
-                <>
-                  <FiMoon className="w-5 h-5" />
-                  <span>Dark Mode</span>
-                </>
-              )}
-            </button>
+
           </div>
         </div>
       )}
